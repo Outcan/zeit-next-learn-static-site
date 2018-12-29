@@ -33,7 +33,10 @@ export default ({ children, title }) => (
     <h1>{title}</h1>
     {children}
     <footer>
-      <p>&copy; {new Date().getFullYear()} Chris Kew. All rights reserved.</p>
+      <p>
+        &copy; {new Date().getFullYear()} Chris Kew. All rights reserved. Site
+        version 0.5.0.
+      </p>
     </footer>
     <style jsx>{`
       .root {
