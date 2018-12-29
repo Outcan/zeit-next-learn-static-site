@@ -4,10 +4,6 @@ import Error from "./_error";
 import Layout from "../components/Layout";
 
 class About extends Component {
-  // state = {
-  //   user: null
-  // };
-
   static async getInitialProps() {
     const res = await fetch("https://api.github.com/users/Outcan");
     const statusCode = res.status > 200 ? res.status : false;
@@ -15,16 +11,6 @@ class About extends Component {
 
     return { user: data, statusCode };
   }
-
-  // componentDidMount() {
-  //   fetch("https://api.github.com/users/Outcan")
-  //     .then(response => response.json())
-  //     .then(data => {
-  //       this.setState({
-  //         user: data
-  //       });
-  //     });
-  // }
 
   render() {
     const { user, statusCode } = this.props;
